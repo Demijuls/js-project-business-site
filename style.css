@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: lightpink;
+}
+
+header {
+  background-image: linear-gradient(rgb(255, 112, 40, 0.5), rgb(255, 255, 255, 0.5)), url(./assets/sport_hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flexstart;
+  align-content: center;
+  align-items: start;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+nav input[type='checkbox'],
+nav label {
+  display: none;
+}
+
+nav {
+  background-color: transparent;
+  padding: 12px 0;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* position: fixed; */
+}
+
+nav a {
+  color: darkred;
+  flex: 1 1 0;
+}
+
+.logo {
+  background-color: lightsalmon;
+  padding: 8px 40px;
+  flex: 0.5;
+  text-align: center;
+}
+
+.main-menu {
+  background-color: pink;
+  padding: 8px 0px;
+  gap: 20px;
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+}
+
+.log-in {
+  background-color: darkorange;
+  padding: 8px 40px 8px 20px;
+  flex: 0.5;
+  text-align: right;
+}
+
+.menu {
+  margin: 0.3em 1em;
+  display: inline-flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav ul li a {
+  flex-shrink: 0;
+}
+
+#hero-image {
+  display: none;
+}
+
+/* #hero-section {
+  background-image: linear-gradient(rgb(255, 112, 40, 0.5), rgb(255, 255, 255, 0.5)), url(./sport_hero.jpg);
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+} */
+
+/* #hero-section {
+  position: relative;
+  top: 120px;
+} */
+
+/* #hero-image {
+  width: 450px;
+} */
+
+.about-container {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.about-point {
+  max-width: 400px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px 40px;
+}
+
+.card {
+  background-color: rgb(145, 145, 255);
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.card-image {
+  max-width: 180px;
+}
+
+.news-container {
+  background-color: rgb(255, 175, 144);
+  padding: 20px 40px;
+}
+
+.social-container {
+  background-color: rgb(246, 146, 107);
+  padding: 20px 40px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-card {
+  background: lightsalmon;
+  border: 30px solid lightskyblue;
+  height: 100px;
+  flex: 1;
+}
+
+.first-flex {
+  flex: 2;
+}
+
+.second-flex {
+  flex: 0.5;
+}
+
+.grid-container {
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 200px 200px;
+  gap: 30px;
+}
+
+.first-grid {
+  grid-column: span 2;
+}
+
+.grid-card {
+  background-color: violet;
+}
+
+footer {
+  padding: 64px 40px;
+}
+
+
+@media (min-width: 1201px) {
+  /*CSS for screens from 1201px wide*/
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+  /*CSS for screens from 801px to 1200px wide*/
+  nav {
+    background-color: #fff;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  h1 {
+    margin-top: 120px;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /*CSS for screens over or equal 481px to 768px wide*/
+
+  nav {
+    background-color: #fff;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .logo,
+  .log-in {
+    width: 100%;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-menu li {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    margin-top: 120px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  /*CSS for screens equal or below 480px wide*/
+
+  nav {
+    background-color: #fff;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+
+  input[type='checkbox']:not(:checked)+ul {
+    display: none;
+  }
+
+  nav label {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 20px;
+    align-self: center;
+  }
+
+  .logo {
+    width: 10%;
+    flex-basis: 1fr;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 1fr;
+  }
+
+  .log-in {
+    width: 10%;
+    flex-basis: 10%;
+    flex-basis: 1fr;
+  }
+
+  h1 {
+    margin-top: 120px;
+  }
+}
