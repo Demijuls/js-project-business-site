@@ -18,7 +18,8 @@
 
     <header>
       <!-- Navigation -->
-      <nav>
+      <!-- Always visible -->
+      <nav aria-label="Main navigation">
         <span style="cursor: pointer"></span>
         <ul class="logo">
           <li class="logo-link">
@@ -44,23 +45,26 @@
           <li class="menu"><a href="#news-section">Blog</a></li>
           <li class="menu"><a href="#contact-section">Contact us</a></li>
         </ul>
-        <!-- Collapsable menu -->
+        <!-- / Collapsable menu -->
 
         <!--  <ul class="log-in">
           <li class="log-in"><a href="#">Log in</a></li>
         </ul> -->
       </nav>
-      <!-- / Navigation -->
+    </header>
+    <!-- / Navigation -->
 
-      <!-- Hero section -->
-
-      <div id="hero-section">
+    <!-- Hero section -->
+    <section class="hero" aria-labelledby="hero-block">
+      <div id="hero-content">
         <h1>(( The Floral Edit ))</h1>
         <p id="hero-description">Sustainable beauty, right at your doorstep</p>
-        <button class="action action-main">Choose your flowers</button>
-        <button class="action action-secondary">Learn more</button>
+        <div class="btn-wrapper">
+          <button class="action action-main">Choose your flowers</button>
+          <button class="action action-secondary">Learn more</button>
+        </div>
       </div>
-    </header>
+    </section>
     <!-- / Hero section -->
     <!-- / Header -->
 
@@ -458,11 +462,11 @@
         action="http://httpbin.org/anything"
         method="post"
       >
-        <label for="email"> </label>
+        <label for="email-subscription"> </label>
         <input
           type="email"
           name="email"
-          id="email"
+          id="email-subscription"
           placeholder="example@email.com"
           required
         />
