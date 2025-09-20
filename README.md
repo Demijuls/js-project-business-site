@@ -6,21 +6,6 @@ link to the website: https://demijuls-technigo-project1.netlify.app/
 
 ---
 
-## 📖 Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Project Structure](#project-structure)
-5. [Getting Started](#getting-started)
-6. [Usage](#usage)
-7. [Screenshots](#screenshots)
-8. [Roadmap](#roadmap)
-9. [Contributing](#contributing)
-10. [License](#license)
-
----
-
 ## 📌 Project Overview
 
 This project is a **static business website** with a responsive design.  
@@ -56,3 +41,15 @@ business-website/
 ├── index.js # JavaScript files
 ├── /assets
 └── README.md # Documentation
+
+Pictures and icons are from:
+Photo by Rikonavt on Unsplash
+Photo by Annie Spratt on Unsplash
+Photo by Hugo Kruip on Unsplash
+Photo by Ruslan Aiginin on Unsplash
+Photo by LAUREN GRAY on Unsplash
+Photo by Johanne Pold Jacobsen on Unsplash
+Photo by Irena Carpaccio on Unsplash
+Photo by Luisa Brimble on Unsplash
+https://icons8.com/icon/43546/menu
+https://icons8.com/icon/zE9uwXycbCLv/flower
