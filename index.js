@@ -27,14 +27,32 @@ document.addEventListener("click", (event) => {
   }
 });
 
+//Subscription validation
 const btnNewsSubscribe = document.getElementById("btn-news-subscribe");
+const subscribeForm = document.getElementById("subscription-form");
 
-btnNewsSubscribe.onclick = () => {
-  alert("Thank you! Check your inbox for a small token of appreciation from us!")
+btnNewsSubscribe.onclick = (e) => {
+  e.preventDefault();
+  if (subscribeForm.checkValidity()) {
+    alert("Thank you! Check your inbox for a small token of appreciation from us!");
+    subscribeForm.reset();
+  }
+  else {
+    subscribeForm.reportValidity();
+  }
 };
 
+//Form sending validation
 const btnContact = document.getElementById("btn-contact");
+const contactForm = document.getElementById("contact-form");
 
-btnContact.onclick = () => {
-  alert("Thank you! We got your message and will get back to you as soon as possible.")
+btnContact.onclick = (e) => {
+  e.preventDefault();
+  if (contactForm.checkValidity()) {
+    alert("Thank you! We got your message and will get back to you as soon as possible.");
+    contactForm.reset();
+  }
+  else {
+    contactForm.reportValidity();
+  }
 };
