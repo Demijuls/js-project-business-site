@@ -1092,6 +1092,10 @@ h2 {
   color: #223127;
 }
 
+input {
+  height: 44px;
+}
+
 .form-input select,
 .form-input input,
 .form-input textarea,
@@ -1113,7 +1117,6 @@ input::placeholder {
   font-family: "lato";
 }
 
-.form-input input:focus,
 .form-input textarea:focus,
 .form-input select:focus {
   background-color: #edf1fe;
@@ -1124,16 +1127,34 @@ input::placeholder {
 input:focus:invalid {
   background-color: #ffe6dd;
   border: 1px solid #c72828;
+  box-shadow: 0 0 8px rgba(248, 95, 48, 0.7);
+  outline: none;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
 }
 
 input:valid {
   background-color: #f3ffed;
   border: 1px solid #3a5d50;
+  box-shadow: 0 0 8px rgba(39, 244, 141, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+
 }
 
 .form-input span {
   color: #786e6e;
 }
+
+/* #phone {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px 8px;
+  min-height: 32px;
+  font-family: Lato;
+  outline: none;
+  box-shadow: none;
+} */
 
 .action-tetriary {
   background-color: #223127;
@@ -1345,20 +1366,21 @@ input:placeholder-shown {
   font-family: "lato";
 }
 
-input:focus {
+/* input:focus {
   background-color: #edf1fe;
   border: 1px solid #014eb9;
-}
+  box-shadow: 0 0 8px rgba(1, 78, 185, 0.7);
+  outline: none;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+} */
 
-/* input:valid {
+input:valid {
   background-color: #f3ffed;
   border: 1px solid #3a5d50;
-} */
-
-/* input:focus:invalid {
-  background-color: #ffe6dd;
-  border: 1px solid #c72828;
-} */
+  box-shadow: 0 0 8px rgba(39, 244, 141, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
 
 .action-tetriary {
   background-color: #223127;
@@ -1445,7 +1467,7 @@ input:focus {
 @media (min-width: 481px) and (max-width: 768px) {
   footer {
     display: grid;
-    grid-template: auto auto auto auto/ repeat(3, auto);
+    grid-template: auto auto auto auto/ auto auto 1fr 1fr;
     padding: 40px 20px;
   }
 
@@ -1460,7 +1482,6 @@ input:focus {
   .form-subscribtion {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: start;
     width: 100%;
     gap: 0;
@@ -1469,13 +1490,17 @@ input:focus {
   input,
   input:placeholder-shown {
     width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
     margin-bottom: 1rem;
   }
 
   footer .action-tetriary {
     margin: 0;
     min-height: 44px;
-    min-width: 100%;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
   }
 
 

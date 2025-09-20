@@ -382,7 +382,8 @@
             id="phone"
             type="tel"
             name="phone"
-            placeholder="46 000 000 000"
+            placeholder="enter your phone"
+            pattern="^\+?\d{10,15}$"
           />
         </div>
 
@@ -442,7 +443,9 @@
           ></label>
         </div>
 
-        <button class="action-tetriary" type="submit">Send message</button>
+        <button id="btn-contact" class="action-tetriary" type="submit">
+          Send message
+        </button>
       </form>
     </article>
 
@@ -495,7 +498,13 @@
           placeholder="example@email.com"
           required
         />
-        <button class="action action-tetriary" type="submit">Sing up</button>
+        <button
+          id="btn-news-subscribe"
+          class="action action-tetriary"
+          type="submit"
+        >
+          Sing up
+        </button>
       </form>
       <div class="copyright">&copy;copyright 2025</div>
     </footer>

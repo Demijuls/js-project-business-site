@@ -26,3 +26,15 @@ document.addEventListener("click", (event) => {
     hamburger.classList.remove("active");
   }
 });
+
+const btnNewsSubscribe = document.getElementById("btn-news-subscribe");
+
+btnNewsSubscribe.onclick = () => {
+  alert("Thank you! Check your inbox for a small token of appreciation from us!")
+};
+
+const btnContact = document.getElementById("btn-contact");
+
+btnContact.onclick = () => {
+  alert("Thank you! We got your message and will get back to you as soon as possible.")
+};
