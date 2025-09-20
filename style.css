@@ -5,11 +5,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Lato";
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -22,21 +24,44 @@ h5 {
 }
 
 /* Navigation */
-nav input[type='checkbox'],
-nav label {
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  margin-right: 16px;
+  background: #FFEEE2;
+  border: none;
+  border-radius: 8px;
+  color: #223127;
+}
+
+.hamburger .icon {
   display: none;
 }
 
+.hamburger .icon-hamburger {
+  display: block;
+}
+
+.hamburger.active .icon-hamburger {
+  display: none;
+}
+
+.hamburger.active .icon-close {
+  display: block;
+}
+
 nav {
-  padding: 0;
+  padding: 0 16px;
   height: 64px;
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
 }
 
 nav a {
@@ -92,28 +117,46 @@ nav li {
 
 /* Tablet screen media 481<768px */
 @media (min-width: 481px) and (max-width: 768px) {
-  nav {
-    display: none;
-    /* flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0; */
+  .hamburger {
+    display: block;
+    margin-right: 0;
   }
 
-  input[type='checkbox']:not(:checked)+ul {
-    display: none;
+  .logo {
+    margin-left: 0;
+    margin-right: auto;
+    padding: 8px 32px;
   }
 
-  /*   .logo {
+  .main-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
     width: 100%;
-    flex-basis: 100%;
-    margin: 0;
+    background-color: #FFEEE2;
     padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(36, 36, 36, 0.1);
+    gap: 16px;
+    text-align: center;
+    /* animation */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
   }
 
-  .main-menu li {
-    flex-direction: row;
-    flex-wrap: wrap;
-  } */
+  .main-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 16px 0;
+  }
+
+  .menu {
+    font-size: 16px;
+    gap: 16px;
+  }
 }
 
 /* / Tablet screen media 481<768px */
@@ -122,39 +165,56 @@ nav li {
 /* Phone screen media <480px */
 @media (max-width: 480px) {
   nav {
-    display: none;
-    /*   margin: 0;
     flex-direction: row;
-    flex-wrap: wrap;
-    z-index: 1; */
-  }
-
-  input[type='checkbox']:not(:checked)+ul {
-    display: none;
-  }
-
-  /* 
-  nav label {
-    background-color: #c72828;
-    display: flex;
-    text-align: right;
-    padding: 20px;
-    align-self: flex-start;
+    justify-content: space-between;
+    padding: 0 16px;
   }
 
   .logo {
-    width: 100%;
-    height: fit-content;
-    flex-basis: 100%;
-    margin: 0;
-    padding: 8px;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 8px 16px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 0;
   }
 
   .main-menu {
     flex-direction: column;
-    flex-wrap: wrap;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #FFEEE2;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(36, 36, 36, 0.1);
+    /* animation */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
   }
- */
+
+  .main-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 16px 0;
+  }
+
+  .main-menu li {
+    margin: 8px 0;
+  }
+
+  .menu {
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    gap: 0;
+  }
 }
 
 /* Phone screen media <480px */
@@ -190,6 +250,8 @@ h1 {
   flex-direction: column;
   gap: 32px;
   align-items: end;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 #hero-description {
@@ -261,6 +323,12 @@ h1 {
   h1 {
     font-size: 64px;
   }
+
+  #hero-content {
+    right: 0;
+    left: 0;
+    padding: 0 20px;
+  }
 }
 
 /* / Tablet screen media 481<768px */
@@ -286,9 +354,11 @@ h1 {
     right: auto;
     gap: 16px;
     align-items: center;
-    width: 100%;
+    right: 0;
+    left: 0;
+    padding: 0 16px;
+    max-width: 100%;
   }
-
 
   #hero-description {
     font-size: 18px;
@@ -480,7 +550,7 @@ h2 {
 
 @media (max-width: 480px) {
   .about-container {
-    padding: 20px 8px 100px 8px;
+    padding: 20px 16px 100px 16px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -495,7 +565,7 @@ h2 {
 
   .about-point {
     border-radius: 24px;
-    max-width: 400px;
+    max-width: 100%;
     gap: 0;
     align-items: center;
     color: #fff;
@@ -966,6 +1036,7 @@ h2 {
 
   .news-image-big {
     max-height: 50%;
+    max-width: 100%;
   }
 
   .link-news:hover {
@@ -1185,6 +1256,12 @@ input:valid {
 
   .form-contact {
     max-width: 100vw;
+  }
+
+  .form-contact input,
+  .form-contact textarea,
+  .form-contact select {
+    max-width: 100%;
   }
 
   .form-input select,

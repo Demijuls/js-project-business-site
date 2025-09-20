@@ -30,18 +30,40 @@
         <!-- / Always visible -->
 
         <!-- Hamburger menu -->
-        <label for="menu-hamburger"> 🍔 </label>
-        <input
-          id="menu-hamburger"
-          type="checkbox"
-          name="hamb-menu"
-          id="hamburger"
-        />
+        <button class="hamburger" id="hamburger" aria-label="menu-hamburger">
+          <svg
+            class="icon icon-hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 3.5 3 A 0.50005 0.50005 0 1 0 3.5 4 L 20.5 4 A 0.50005 0.50005 0 1 0 20.5 3 L 3.5 3 z M 3.5 11 A 0.50005 0.50005 0 1 0 3.5 12 L 20.5 12 A 0.50005 0.50005 0 1 0 20.5 11 L 3.5 11 z M 3.5 19 A 0.50005 0.50005 0 1 0 3.5 20 L 20.5 20 A 0.50005 0.50005 0 1 0 20.5 19 L 3.5 19 z"
+            ></path>
+          </svg>
+          <svg
+            class="icon icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 20.496094 2.9921875 A 0.50005 0.50005 0 0 0 20.146484 3.1464844 L 12 11.292969 L 3.8535156 3.1464844 A 0.50005 0.50005 0 0 0 3.4941406 2.9941406 A 0.50005 0.50005 0 0 0 3.1464844 3.8535156 L 11.292969 12 L 3.1464844 20.146484 A 0.50005 0.50005 0 1 0 3.8535156 20.853516 L 12 12.707031 L 20.146484 20.853516 A 0.50005 0.50005 0 1 0 20.853516 20.146484 L 12.707031 12 L 20.853516 3.8535156 A 0.50005 0.50005 0 0 0 20.496094 2.9921875 z"
+            ></path>
+          </svg>
+        </button>
         <!--/  Hamburger menu -->
+
         <!-- Collapsable menu -->
-        <ul class="main-menu">
+        <ul class="main-menu" id="nav-links">
           <li class="menu"><a href="#">Home</a></li>
-          <li class="menu"><a href="#About-section">About</a></li>
+          <li class="menu"><a href="#about-section">About</a></li>
           <li class="menu">
             <a href="#subscription-section">Subscriptions</a>
           </li>
@@ -68,7 +90,7 @@
     <!-- / Header -->
 
     <!-- About -->
-    <article id="About-section" class="about-container">
+    <article id="about-section" class="about-container">
       <h2>(What is flower subsription?)</h2>
 
       <div class="about-point about-1">
@@ -315,7 +337,7 @@
       >
         <div class="form-input">
           <label for="topic">What can we help you with?</label>
-          <select name="topic" id="topic" optional>
+          <select name="topic" id="topic">
             <option value="Order a bouquet">Order a bouquet</option>
             <option value="Wedding arrangements">Wedding arrangements</option>
             <option value="Apartment greenery">Apartment greenery</option>
@@ -376,6 +398,7 @@
                   class="radiobutton"
                   type="radio"
                   name="answer_radio"
+                  value="morning"
                   id="call-morning"
                   checked
                 />
@@ -387,17 +410,19 @@
                   class="radiobutton"
                   type="radio"
                   name="answer_radio"
+                  value="lunch"
                   id="call-lunch"
                 />
                 <span class="checkmark"></span>
               </label>
 
               <label class="radio-container" for="call-afternoon"
-                >Aternoon
+                >Afternoon
                 <input
                   class="radiobutton"
                   type="radio"
                   name="answer_radio"
+                  value="afternoon"
                   id="call-afternoon"
                 />
                 <span class="checkmark"></span>
@@ -409,6 +434,7 @@
                   class="radiobutton"
                   type="radio"
                   name="answer_radio"
+                  value="evening"
                   id="call-evening"
                 />
                 <span class="checkmark"></span>
@@ -437,7 +463,7 @@
           Sveavägen 68B<br />
           Stockholm<br />
           111 11<br />
-          Swedebn<br />
+          Sweden<br />
           +46 123 456 789 <br />
           +46 987 654 321
         </p>
@@ -475,5 +501,7 @@
     </footer>
 
     <!-- / Footer -->
+
+    <script src="./index.js"></script>
   </body>
 </html>
