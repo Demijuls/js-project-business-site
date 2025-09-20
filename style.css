@@ -79,12 +79,6 @@ nav a:focus {
   margin-right: 80px;
 }
 
-/* .log-in {
-  padding: 8px 40px 8px 20px;
-  flex: 0.5;
-  text-align: right;
-} */
-
 .menu {
   padding: 0.3em 1em;
   display: inline-flex;
@@ -109,8 +103,7 @@ nav li {
     display: none;
   }
 
-  /*   .logo,
-  .log-in {
+  /*   .logo {
     width: 100%;
     flex-basis: 100%;
     margin: 0;
@@ -162,12 +155,6 @@ nav li {
     flex-wrap: wrap;
   }
  */
-  /* 
-  .log-in {
-    display: inline-block;
-    width: 1fr;
-    align-self: flex-start;
-  } */
 }
 
 /* Phone screen media <480px */
@@ -1496,29 +1483,3 @@ input:focus {
 /* / Phone screen media <480px */
 
 /* / Footer */
-
-
-
-@media (min-width: 481px) and (max-width: 768px) {
-
-  /*CSS for screens over or equal 481px to 768px wide*/
-
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0;
-  }
-
-  .logo,
-  .log-in {
-    width: 100%;
-    flex-basis: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .main-menu li {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
